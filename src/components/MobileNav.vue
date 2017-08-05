@@ -42,7 +42,7 @@
 
 
 	
-	#bottomNav{
+	#bottomNav{ 
 			
 
 			
@@ -59,6 +59,7 @@
 				z-index:3;
 
 				ul{
+
 					height:100%;
 					font-size:0;
 					text-align:center;
@@ -73,7 +74,7 @@
 						color:#fff;
 						font-size:.12rem;
 						text-align:center;
-						margin:.04rem 7%;
+						margin:0.8% 7%;
 						width:10%;
 						height:auto;
 						font-size:0;
@@ -89,7 +90,7 @@
 						}
 
 						.icon{
-							width:70%;
+							width:85%;
 							display:block;
 							margin:0 auto;
 

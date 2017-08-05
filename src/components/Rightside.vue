@@ -109,8 +109,8 @@
 
 
 <style lang="less" scoped>
+	
 	#rightSide{
-		
 		position:absolute;
 		height:93.5%;
 		margin:auto;
@@ -131,7 +131,6 @@
 			width:100%;
 			overflow-y:auto;
 			overflow-x:hidden;
-
 		}
 
 	}
