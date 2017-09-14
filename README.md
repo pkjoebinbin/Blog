@@ -12,5 +12,5 @@ www.pkjoebinbin.cn
  - php（感谢17岁神童少年基佬城的数据接口及服务器友情赞助）
  
 <br/>
-**先来图**
+**首页**
 <img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/index.png" />
