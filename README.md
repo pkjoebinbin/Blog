@@ -16,3 +16,17 @@ www.pkjoebinbin.cn
 <br/>
 <strong>首页</strong>
 <img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/index.png" />
+
+<strong>博客详情</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/detail.png" />
+
+
+<strong>后台登录页面</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/login.png" />
+
+<strong>数据页面</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/dashboard.png" />
+
+<strong>博客编辑发布</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/dashboard.png" />
+
