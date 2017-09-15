@@ -13,9 +13,9 @@ www.pkjoebinbin.cn
  - php（感谢17岁神童少年基佬城的数据接口及服务器友情赞助）
 
 <br/>
-<strong>vue项目文件结构及配置文件</strong>
-<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" stlye="display:inline-block"/>
-<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" stlye="display:inline-block"/>
+<strong>vue项目文件结构及置文件</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/package%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"/>
+
 
 vue-cli脚手架搭建，使用的simple模版，单页应用。考虑到数据量及组件间的数据通讯相对没有那么复杂，最终放弃使用vuex。
 
