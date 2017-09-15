@@ -82,3 +82,25 @@ www.pkjoebinbin.cn
 <strong>博客编辑发布</strong>
 <img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/adminDetail.png" />
 
+
+<br/>
+<strong>性能优化</strong>
+
+<br/>
+
+ - 预览图延迟加载
+ - 拆分webpack打包文件，框架文件单独打包
+ - 静态文件添加哈希值
+ - 小图片资源转base64格式打包
+ - 
+
+<br/>
+<strong>踩到的坑</strong>
+
+<br/>
+
+
+- 特殊页面布局时vue-router的架构
+- v-if生成的DOM节点，在个别需要操作DOM的需求时Vue周期钩子函数的选择
+- 前后数据交互标签符的转译
+- over-flow:scroll在移动端不顺畅的问题
