@@ -12,6 +12,9 @@ www.pkjoebinbin.cn
  - vue-router
  - php（感谢17岁神童少年基佬城的数据接口及服务器友情赞助）
 
+<br/>
+<strong>vue项目文件结构</strong>
+<img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png"/>
   
 <br/>
 <strong>首页</strong>
