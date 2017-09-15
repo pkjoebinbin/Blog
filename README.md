@@ -14,10 +14,13 @@ www.pkjoebinbin.cn
 
 <br/>
 <strong>vue项目文件结构及置文件</strong>
+
+> vue-cli脚手架搭建，使用的simple模版，单页应用。考虑到数据量及组件间的数据通讯相对没有那么复杂，故没有使用vuex。
+
 <img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/package%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"/>
 
 
-vue-cli脚手架搭建，使用的simple模版，单页应用。考虑到数据量及组件间的数据通讯相对没有那么复杂，最终放弃使用vuex。
+
 
 <br/>
 <strong>项目需求：</strong>
