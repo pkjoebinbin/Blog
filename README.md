@@ -14,8 +14,9 @@ www.pkjoebinbin.cn
 
 <br/>
 <strong>vue项目文件结构及置文件</strong>
-
+<br/>
 > vue-cli脚手架搭建，使用的simple模版，单页应用。考虑到数据量及组件间的数据通讯相对没有那么复杂，故没有使用vuex。
+<br/>
 
 <img src="https://github.com/pkjoebinbin/Blog/blob/master/readme%E9%A2%84%E8%A7%88%E5%9B%BE/package%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"/>
 
@@ -24,9 +25,15 @@ www.pkjoebinbin.cn
 
 <br/>
 <strong>项目需求：</strong>
+<br/>
 
 
 > 前台展示数据、用户评论，后台实现博客增删改查、富文本编辑、评论提醒及评论回复。
+
+<br/>
+<strong>设计：</strong>
+<br/>
+一开始并没有任何特别的想法，使用常规的文档流的布局，后来推翻了，觉得太普通，而且单页应用做成文档流布局体现不出单页效果！！最后定稿为左右栏布局，整体垂直水平居中，四边留白。
 
   
 <br/>
