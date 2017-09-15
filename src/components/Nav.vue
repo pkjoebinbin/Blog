@@ -49,7 +49,7 @@
 				<router-link :to="{name:'suibilist'} " tag="li"  >随笔</router-link>
 					
 					
-				<li >关于我</li>
+				<li><a href="aboutMe.html">关于我</a></li>
 			</ul>
 		</nav>
 

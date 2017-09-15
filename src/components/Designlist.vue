@@ -1,12 +1,15 @@
 <template>
 	<article id="designList" class="listStyle">
 		
-			<!-- lading动画 -->
-			<div class="spinner" v-show="designList.length==0">
-				<div class="bounce1"></div>
-				<div class="bounce2"></div>
-				<div class="bounce3"></div>
-			</div>
+			<!-- 无数据 -->
+				<p class="noData" v-if="noDataonOff">还没写呢，看看其他的吧~</p>
+			
+				<!-- lading动画 -->
+				<div class="spinner" v-else v-show="this.designList.length == 0">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
 
 			<router-link :to="{name:'detail',params:{id:val.book_id}}" tag="section" v-for="(val,index) in designList" class="list">
 
@@ -65,6 +68,7 @@
 				designList:[],
 				loadingOnoff:false,
 				ajaxOnoff:false,
+				noDataonOff:false,
 
 			}
 		},
@@ -80,6 +84,10 @@
 				).then(function(res){
 
 					var design = res.body;
+
+					if(design == null){
+						this.noDataonOff = true;
+					}
 					
 					for(var i in design){
 						

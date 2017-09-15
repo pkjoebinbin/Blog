@@ -1,9 +1,11 @@
 <template>
 	<article id="houduanList" class="listStyle">
-		
+				
+				<!-- 无数据 -->
+				<p class="noData" v-if="noDataonOff">还没写呢，看看其他的吧~</p>
 			
 				<!-- lading动画 -->
-				<div class="spinner" v-show="houduanList.length==0">
+				<div class="spinner" v-else v-show="this.houduanList.length == 0">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -28,16 +30,18 @@
 					<div class="clear"></div>
 				</div>
 
-				<div class="loading" v-show="ajaxOnoff">
+			
+			</router-link>
+
+
+			<div class="loading" v-show="ajaxOnoff">
 					<div class="spinner loadingStyle" v-if="loadingOnoff">
 						<div class="bounce1"></div>
 						<div class="bounce2"></div>
 						<div class="bounce3"></div>
 					</div>
 					<h4 @click="ajax" v-else>加载更多</h4>
-				</div>
-			
-			</router-link>
+			</div>
 
 			
 
@@ -65,6 +69,7 @@
 
 				loadingOnoff:false,
 				ajaxOnoff:false,
+				noDataonOff:false,
 
 
 				
@@ -90,6 +95,11 @@
 				).then(function(res){
 
 					var houduan = res.body;
+
+					if(houduan == null){
+						this.noDataonOff = true;
+					}
+
 					
 					for(var i in houduan){
 						

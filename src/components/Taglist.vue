@@ -8,7 +8,7 @@
 				<div class="bounce3"></div>
 			</div>
 
-			<router-link :to="{name:'detail',params:{id:val.book_id,title:val.book_title,content:val.book_content,date:val.book_begintime,tag:val.book_label}}" tag="section" class="list" v-for="(val,index) in tagList">
+			<router-link :to="{name:'detail',params:{id:val.book_id}}" tag="section" class="list" v-for="(val,index) in tagList">
 			
 				
 					
@@ -33,6 +33,16 @@
 					</div>
 				
 			</router-link>
+
+
+			<div class="loading" v-show="ajaxOnoff">
+					<div class="spinner loadingStyle" v-if="loadingOnoff">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
+					<h4 @click="ajax" v-else>加载更多</h4>
+			</div>
 				
 
 	</article>
@@ -51,6 +61,8 @@
 				tagListUrl:'admin/index.php?m=Home&c=Index&a=labelsingle',
 				
 				tagList:[],
+				loadingOnoff:false,
+				ajaxOnoff:false,
 
 				
 
@@ -59,6 +71,11 @@
 		},
 
 		methods:{
+
+			AjaxDonghua:function(){
+					this.loadingOnoff =! this.loadingOnoff;
+			},
+
 			getData(){
 				this.tagList=[];
 				this.$http.post(this.tagListUrl,{label:this.$route.params.tag},{emulateJSON:true})
@@ -69,10 +86,51 @@
 						this.tagList.push(res.data[i])
 					}
 
+					if(this.tagList.length>=12){
+						this.ajaxOnoff =true;
+					}else{
+						this.ajaxOnoff =false;
+					}
+
 				},function(res){
 					console.log('请求失败')
 				})
 			},
+
+			ajax:function(){
+
+				this.$http.post(
+		          this.tagListUrl,
+		          {label:this.$route.params.tag,now:this.tagList.length,loadings:6},{emulateJSON:true},this.AjaxDonghua()
+		          ).then(function(res){
+
+		          	
+		          	 if(res.body==null){
+						this.ajaxOnoff =false;	   
+		                return false;
+
+		             }else{
+						
+						for(var i in res.body){
+		             		this.tagList.push(res.body[i]);
+		              
+		            	}
+
+		             }
+		                    
+
+		            this.AjaxDonghua();
+            
+
+		          },function(res){
+		            alert('网络故障，请重新加载')
+		            this.AjaxDonghua()
+		            
+		          })
+
+				},
+
+
 
 			
 		},

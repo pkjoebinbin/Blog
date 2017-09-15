@@ -210,6 +210,7 @@ var vm = new Vue({
   mounted:function(){
     
     document.getElementById('loading').style.display='none';
+    document.getElementsByTagName('html')[0].style.overflow ='visible';
    
     
   },

@@ -112,6 +112,7 @@ www.pkjoebinbin.cn
 > - v-if生成的DOM节点，在个别需要操作DOM的需求时Vue周期钩子函数的选择
 > - 前后数据交互标签符的转译
 > - over-flow:scroll在移动端不顺畅的问题
+> - webpack打包路径问题（这个是真的坑，妈蛋）
 
 
 

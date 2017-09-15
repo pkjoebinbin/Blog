@@ -139,8 +139,8 @@ html{
 	height:100%;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Microsoft Yahei', sans-serif;
 	font-size:625%;
-	
 	color:#333;
+	overflow:hidden;
 
 	
 }
@@ -302,8 +302,9 @@ a{
 			cursor: pointer;
 
 			h4{
-				font-size:.14rem;
+				font-size:.12rem;
 				font-weight:normal;
+				
 			}
 		}
 
@@ -385,6 +386,14 @@ a{
 	
 	h1{
 		font-size:32px;
+	}
+
+	blockquote{
+		background:#f6f6f6;
+		border-left:0.03rem solid #b9b9b9;
+		padding:20px;
+
+
 	}
 
 	
@@ -503,7 +512,7 @@ a{
 			        transform: rotate(360deg);
 		}
 	}
-	}
+}
 
 
 
@@ -517,6 +526,23 @@ a{
 
 	.fadeIn{
 		animation:fadeIn 1s forwards;
+	}
+
+
+
+
+	//无数据样式
+	.noData{
+		font-size:14px;
+		color:#ababab;
+		position:absolute;
+		bottom:0;
+		top:0;
+		right:0;
+		left:0;
+		margin:auto;
+		
+		height:20px;
 	}
 
 

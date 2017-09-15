@@ -5,8 +5,11 @@
 				
 
 
+				<!-- 无数据 -->
+				<p class="noData" v-if="noDataonOff">还没写呢，看看其他的吧~</p>
+			
 				<!-- lading动画 -->
-				<div class="spinner" v-show="qianduanList.length==0">
+				<div class="spinner" v-else v-show="this.qianduanList.length == 0">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -70,6 +73,7 @@
 
 				loadingOnoff:false,
 				ajaxOnoff:false,
+				noDataonOff:false,
 
 			}
 		},
@@ -82,7 +86,8 @@
 		          {classify:1,now:this.qianduanList.length},{emulateJSON:true},this.AjaxDonghua()
 		          ).then(function(res){
 
-
+					
+					
             
 		            for(var i in res.body){
 		              if(res.body[i]==0){
@@ -131,7 +136,12 @@
 				).then(function(res){
 					
 					var qianduan = res.body;
-					//console.log(qianduan)
+					
+					if(qianduan== null){
+						this.noDataonOff = true;
+					}
+
+
 					for(var i in qianduan){
 						
 					 this.qianduanList.push(qianduan[i])

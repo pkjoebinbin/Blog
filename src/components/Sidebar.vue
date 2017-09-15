@@ -66,17 +66,14 @@
 				</div>
 			
 			<ul>
-				<router-link :to="{name:'taglist',params:{tag:blogTag}}" tag="li" v-for="(blogTag,index) in blogTag" >{{blogTag}}</router-link>
+				<router-link :to="{name:'taglist',params:{tag:blogTagList}}" tag="li" v-for="(blogTagList,index) in getTag" class="liHover">{{blogTagList}}</router-link>
+				<li @click="change" class="change">没找到感兴趣的？</li>
 			</ul>
-				
-				
-				
-				
+
 			
-			
-		
-			
+
 		</hgroup>
+
 	
 		<section id="contect">
 			
@@ -133,6 +130,9 @@
 				tagUrl:'admin/index.php?m=Home&c=Index&a=showlabel',             //标签接口
 				lastestBlogs:[],
 				blogTag:[],
+				changeArray:[],
+				
+
 				
 			}
 		},
@@ -140,10 +140,62 @@
 		methods:{
 			toAdmin(){
 				window.location.href="admin.html"; 
+			},
+
+			change(){
+				this.changeArray =[];
 			}
+
+			
+
+			
+		},
+
+		computed:{
+			
+
+
+			getTag(){
+
+
+				this.changeArray =[];
+
+				var NowArray = [];
+				
+
+				for(let index=0; index<this.blogTag.length; index++){
+					NowArray.push(this.blogTag[index]);
+				}				
+
+				
+					
+					
+
+
+				for(var i=0;i< 6;i++){
+
+					
+					if(NowArray.length>0){
+						var arrIndex = Math.floor(Math.random()*NowArray.length);
+						this.changeArray[i] = NowArray[arrIndex];
+						NowArray.splice(arrIndex, 1);
+					}else{
+						break;
+					}
+				}
+
+
+				return this.changeArray;
+
+			},
+
+			
+			
 		},
 
 		created:function(){
+			
+			
 
 			//获取最新文章
 			this.$http.get(this.latestBlogsTitleUrl)       
@@ -187,7 +239,7 @@
 			},
 
 			mounted:function(){
-
+				
   				
   				
 
@@ -243,10 +295,10 @@
 
 		.latestBlogs{
 			//background:red;
-			margin:10% 8%;
+			margin:8% 8%;
 
 			h4{
-				color:#fff;
+				color:#35aa66;
 			}
 
 
@@ -269,10 +321,10 @@
 
 		.tag{
 			//background:pink;
-			margin:15% 8%;
+			margin:0 8%;
 
 			h4{
-				color:#fff;
+				color:#35aa66;	
 			}
 
 			ul{
@@ -287,23 +339,44 @@
 					border-radius: .2rem;
 					display: inline-block;
 					font-size:12px;
-					margin:.04rem;
+					//margin:.04rem;
+
+					margin:1%;
 
 				}
 
-				li:hover{
+				.liHover:hover{
 					color:#333;
 					background: #fff;
 					//font-weight:bold;	
 				}
 			}
+
+			.change{
+					font-size:.12rem;
+					font-weight:bold;
+					//margin-top:.04rem;
+					cursor: pointer;
+					color:#35aa66;
+					border:none;
+					margin-left:0;
+					margin-right:0;
+					padding-left:0;
+					padding-right:0;
+					
+				}
+
+
+
+
+			
 			
 		}
 
 		#contect{
 			//background:pink;
 			position:absolute;
-			bottom:2%;
+			bottom:1.5%;
 			width:100%;
 
 
@@ -326,7 +399,7 @@
 
 					h5{
 						font-size:.12rem;
-						margin-top:10px;
+						margin-top:6px;
 						color:#fff;
 						font-weight:normal;
 					}
