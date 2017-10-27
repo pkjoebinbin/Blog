@@ -13,7 +13,7 @@
 			
 			<router-link :to="{name:'detail',params:{id:val.book_id}}" tag="section" v-for="(val,index) in houduanList" class="list">
 			
-				<img src="../assets/loadingPic.jpg" :data-src="val.book_imgpath" alt="" class="img">
+				<img src="../assets/loadingPic.jpg" :data-src="val.book_imgpath" alt="前端 javascript css html5 nodejs vue webpack" title="前端 javascript css html5 nodejs vue webpack" class="img">
 				<hgroup>
 					<h4>
 						{{val.book_title}}

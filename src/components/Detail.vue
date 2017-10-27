@@ -210,6 +210,8 @@
 		
 		margin:.45rem 2% 0;
 
+
+
 		hgroup{
 			//background:#eee;
 			border-left:4px solid #219a54;
@@ -236,6 +238,8 @@
 			font-size:14px;
 			line-height:2;
 			margin:.4rem auto;
+
+			
 		}
 
 		
